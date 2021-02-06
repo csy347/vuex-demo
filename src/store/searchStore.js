@@ -20,7 +20,7 @@ export default new vuex.Store({
 
     // 多个参数，可以通过对象的方式传递
     changeSearchContentByObject (state, payload) {
-      state.searchContent = 'mutations-boject-' + payload.searchContent
+      state.searchContent = 'mutations-object-' + payload.searchContent
     }
   },
   actions: {

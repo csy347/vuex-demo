@@ -21,7 +21,7 @@ export default {
   props: {},
   methods: {},
   mounted () {
-    console.log('搜索页' + this.$store.state.searchContent)
+    // console.log('搜索页' + this.$store.state.searchContent)
   }
 }
 </script>

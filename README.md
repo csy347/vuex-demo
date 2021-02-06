@@ -8,7 +8,7 @@
 
 **Getter:**
 
-1. `getter`主要用于在获取数据时，对数据进行加工后返回。
+1. `getter`主要用于在获取数据源时，对数据进行加工后返回。
 
 2. 通过Vuex的Getter，我们可以在Store中对数据做统一加工处理，利于日后的项目维护。
 
@@ -25,6 +25,17 @@
 1. `Action`和`Mutation`类似，它只是能够处理异步的情况，最终通过`commit()`函数调用Mutation去修改数据
 
 2. 通过`this.$store.dispatch()`去调用Action的方法
+
+**辅助:**
+
+...mapGetters、...mapMutation、...mapActions，主要是通过ES6的语法简化代码书写。
+
+## Store 模块化
+
+> 如果我们将所有的数据都写入一个Store的state中，这时候我们获取，修改数据。随着项目不断变大，我们这个Store中的state和Mutation、Getter、Action的数量和Store代码行数就会爆炸性的增长。使得我们的Store变得维护困难。
+> 这个时候我们可以Store模块化，通过Module整合各个模块，然后将Store挂在根组件下
+
+- namespaced: true
 
 ## 参考
 
