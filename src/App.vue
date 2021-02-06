@@ -1,32 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <!-- <h1>{{ name }}</h1> -->
+    <!-- <button @click="modifyNameAction">修改名字</button> -->
+    <router-view />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+// import { mapState, mapActions } from 'vuex'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  computed: {
+    // ...mapState(['name'])
+  },
+  methods: {
+    // ...mapActions(['modifyName']),
+    // modifyNameAction () {
+    //   this.modifyName('李四')
+    // }
   }
 }
-</style>
+</script>
