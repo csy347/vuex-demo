@@ -18,49 +18,29 @@ export default {
   components: { SearchInput, SearchItem },
   data () {
     return {
-      content: ''
+      content: '444'
     }
   },
   props: {},
   mounted () {
-    // // state
-    // console.log(this.$store.state.searchContent)
-
-    // // getter
-    // console.log(this.$store.getters.getSearchContent)
-
-    // // mutation
-    // // 通过this.$store.commit()方法修改state的searchContent参数
-    // // 在payload中传递参数
-    // this.$store.commit('changeSearchContent', '123')
-    // console.log(this.$store.state.searchContent)
-
-    // // action
-    // this.$store.dispatch('changeSearchContentByAction', {
-    //   searchContent: '321'
-    // })
-    // setTimeout(() => {
-    //   console.log(this.$store.state.searchContent)
-    // }, 5000)
-
     // state
-    console.log(this.$store.state.searchInputStore.searchContent)
+    console.log(this.$store.state.searchContent)
 
     // getter
-    console.log(this.$store.getters['searchInputStore/getSearchContent'])
+    console.log(this.$store.getters.getSearchContent)
 
     // mutation
     // 通过this.$store.commit()方法修改state的searchContent参数
     // 在payload中传递参数
-    this.$store.commit('searchInputStore/changeSearchContent', '123')
-    // console.log(this.$store.state.searchContent)
+    this.$store.commit('changeSearchContent', '123')
+    console.log(this.$store.state.searchContent)
 
     // action
-    this.$store.dispatch('searchInputStore/changeSearchContentByAction', {
+    this.$store.dispatch('changeSearchContentByAction', {
       searchContent: '321'
     })
     setTimeout(() => {
-      // console.log(this.$store.state.searchContent)
+      console.log(this.$store.state.searchContent)
     }, 5000)
   }
 
