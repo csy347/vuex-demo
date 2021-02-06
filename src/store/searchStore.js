@@ -14,7 +14,7 @@ export default new vuex.Store({
   },
   mutations: {
     // 单个参数
-    chagneSearchContent (state, payload) {
+    changeSearchContent (state, payload) {
       state.searchContent = 'mutations-' + payload
     },
 

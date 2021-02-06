@@ -2,7 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
-import store from './store/index'
+import store from './store/modifyName.js'
+// import store from './store/index'
 // import searchStore from './store/searchStore' // 引入searchStore.js
 
 Vue.config.productionTip = false

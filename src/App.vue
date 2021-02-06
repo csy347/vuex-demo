@@ -1,23 +1,29 @@
 <template>
   <div id="app">
-    <!-- <h1>{{ name }}</h1> -->
-    <!-- <button @click="modifyNameAction">修改名字</button> -->
-    <router-view />
+    <h1>{{ name }}</h1>
+    <button @click="modifyNameAction">修改名字</button>
+    <!-- <router-view /> -->
   </div>
 </template>
 
 <script>
-// import { mapState, mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   computed: {
-    // ...mapState(['name'])
+    ...mapGetters({
+      name: 'moduleA/detail'
+    })
   },
   methods: {
-    // ...mapActions(['modifyName']),
-    // modifyNameAction () {
-    //   this.modifyName('李四')
-    // }
+    // ...mapActions(['callAction']),
+    ...mapActions({
+      call: 'moduleA/callAction'
+    }),
+
+    modifyNameAction () {
+      this.call()
+    }
   }
 }
 </script>
