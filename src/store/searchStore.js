@@ -18,9 +18,16 @@ export default new vuex.Store({
       state.searchContent = 'mutations-' + payload
     },
 
-    // 多个参数
+    // 多个参数，可以通过对象的方式传递
     changeSearchContentByObject (state, payload) {
       state.searchContent = 'mutations-boject-' + payload.searchContent
+    }
+  },
+  actions: {
+    changeSearchContentByAction (context, payload) {
+      setTimeout(() => {
+        context.commit('changeSearchContentByObject', payload)
+      }, 2000)
     }
   }
 })

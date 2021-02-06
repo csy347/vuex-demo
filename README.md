@@ -20,6 +20,8 @@
 
 **Action:**
 
+> Action和Mutation类似，区别在于: 1. Action提交的是mutation，而不是直接变更后的状态。 2. Action可以包含任意异步操作
+
 1. `Action`和`Mutation`类似，它只是能够处理异步的情况，最终通过`commit()`函数调用Mutation去修改数据
 
 2. 通过`this.$store.dispatch()`去调用Action的方法
